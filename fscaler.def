@@ -1,0 +1,11 @@
+LIBRARY fscaler
+    EXPORTS
+        fs_CloseFonts
+        fs_ContourGridFit
+        fs_ContourScan
+        fs_FindBitMapSize
+        fs_Initialize
+        fs_NewGlyph
+        fs_NewSfnt
+        fs_NewTransformation
+        fs_OpenFonts
