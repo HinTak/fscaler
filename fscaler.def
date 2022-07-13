@@ -1,11 +1,11 @@
 LIBRARY fscaler
     EXPORTS
-        fs_CloseFonts
-        fs_ContourGridFit
-        fs_ContourScan
-        fs_FindBitMapSize
-        fs_Initialize
-        fs_NewGlyph
-        fs_NewSfnt
-        fs_NewTransformation
-        fs_OpenFonts
+        fs_CloseFonts             @0
+        fs_ContourGridFit         @1
+        fs_ContourScan            @3
+        fs_FindBitMapSize         @5
+        fs_Initialize             @7
+        fs_NewGlyph               @8
+        fs_NewSfnt                @9
+        fs_NewTransformation      @11
+        fs_OpenFonts              @12
