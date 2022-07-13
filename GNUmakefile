@@ -6,8 +6,8 @@ LDFLAGS=-shared -Wl,--enable-stdcall-fixup -Wl,--enable-auto-image-base -Xlinker
 
 default: $(TARGETNAME).dll
 
-$(TARGETNAME).dll : $(TARGETNAME).def
-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(SOURCES)
+$(TARGETNAME).dll : $(TARGETNAME).def $(SOURCES)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
 
 clean:
 	$(RM) $(TARGETNAME).dll $(TARGETNAME).dll.a
