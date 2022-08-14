@@ -4,6 +4,7 @@ LIBRARY fscaler
         fs_ContourGridFit         @1
         fs_ContourScan            @3
         fs_FindBitMapSize         @5
+        fs_GetAdvanceWidth
         fs_Initialize             @7
         fs_NewGlyph               @8
         fs_NewSfnt                @9
