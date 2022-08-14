@@ -1,0 +1,19 @@
+# This is a generic variant, when a *.def file is not present.
+
+CC=i686-w64-mingw32-gcc
+CFLAGS=-flto -O3
+# "-Wl,--enable-stdcall-fixup" is needed with WINAPI macros
+LDFLAGS=-static-libgcc -shared -Wl,--enable-stdcall-fixup -Wl,--enable-auto-image-base -Xlinker --out-implib -Xlinker $(TARGETNAME).dll.a
+
+STRIP=i686-w64-mingw32-strip
+
+include sources
+
+default: $(TARGETNAME).dll
+
+$(TARGETNAME).dll : $(SOURCES)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
+	$(STRIP) $@
+
+clean:
+	$(RM) $(TARGETNAME).dll $(TARGETNAME).dll.a
